@@ -1,10 +1,34 @@
 <html>
 <head>
+    <style>
+        .primary{
+            color: #39a639;
+        }
+    </style>
     <script>
 
     </script>
 </head>
 <body>
     <h1>Welcome to my application</h1>
+    <p>Please open your browser console and add value to the list</p>
+    <p>write <span class="primary">add('value');</span> in order to add an new value</p>
+    <p>Write <span class="primary">dell('value');</span> if you want to delete a value from the list</p>
+
+    <h1>My list from here:</h1>
+    <p id="list">
+
+    </p>
+    <script>
+        var list = [];
+        list[0]="Banana";
+        document.getElementById("list").innerHTML = list;
+        function add(newElement){
+            list[list.length] = newElement;
+            document.getElementById("list").innerHTML = list;
+            return list;
+        }
+//        function
+    </script>
 </body>
 </html>
