@@ -13,7 +13,8 @@
     <h1>Welcome to my application</h1>
     <p>Please open your browser console and add value to the list</p>
     <p>write <span class="primary">add('value');</span> in order to add an new value</p>
-    <p>Write <span class="primary">dell('value');</span> if you want to delete a value from the list</p>
+    <p>Write <span class="primary">remove('value');</span> if you want to delete a value from the list</p>
+    <p>Write <span class="primary">opp(position,value);</span> if you want to insert an element in a certain position</p>
 
     <h1>My list from here:</h1>
     <p id="list">
@@ -28,7 +29,30 @@
             document.getElementById("list").innerHTML = list;
             return list;
         }
-//        function
+        function remove(element){
+            var x = 0;
+            while(list[x]){
+                if(element==list[x]){
+                    list[x]=null;
+                }
+                x++;
+            }
+            document.getElementById("list").innerHTML = list;
+        }
+        function opp(a,b){
+            list.splice(a,0,b);
+            document.getElementById("list").innerHTML = list;
+        }
+        function search(element){
+            var x = 0;
+            while(list[x]){
+                if(element==list[x]){
+                    console.log(x);
+                    break;
+                }
+                x++;
+            }
+        }
     </script>
 </body>
 </html>
